@@ -1,0 +1,55 @@
+/*ForumPost.module.css*/
+.box {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-direction: column;
+    text-align: left;
+}
+.header{
+    background-image: url("../../imgs/background_flipped.jpg");
+    width: 100%;
+    height: 25%;
+    margin-top:-20%;
+    border-radius: 10px 10px 0px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+}
+.header p{
+    margin-left:5%;
+    color: white;
+    font-weight: Bold;
+}
+.subject{
+    color:#2f6c70;
+    font-size: 16px;
+}
+
+.information {
+    margin-top: -10px;
+    font-size:12px;
+    margin-bottom: 20px;
+}
+
+.content{
+    margin:5px;
+    margin-left:10px;
+    margin-right:10px;
+    text-align: left;
+}
+.read{
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #093336;
+    font-weight: bold;
+    background-color: white;
+    padding:8px;
+}

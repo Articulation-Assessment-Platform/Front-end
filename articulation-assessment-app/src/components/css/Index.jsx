@@ -1,0 +1,1 @@
+export {default as AmountUsersStyles} from './AmountUsers.module.css'
