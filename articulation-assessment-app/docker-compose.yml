@@ -1,0 +1,11 @@
+﻿services:
+  frontend:
+    image: articulation-assessment/frontend:development
+    container_name: frontend
+    ports:
+      - "4001:443"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      tags:
+        - "articulation-assessment/frontend:development"

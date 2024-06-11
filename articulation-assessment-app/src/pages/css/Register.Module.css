@@ -1,0 +1,136 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.registerContainer {
+    width: 40%;
+    display: flex; /* Flex container */
+    justify-content: space-between; /* Space between the box groups */
+}
+
+.box {
+    width: 48%; /* Adjust width to fit within the container with space between */
+}
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin:10px;
+}
+label{
+    margin-bottom: -5px;
+    font-weight: bold;
+    font-size: small;
+    margin-left:20px;
+}
+.registerInput2 {
+    width: 100%; /* Adjust width of the input boxes */
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 35px;
+}
+.registerInput {
+    width: 90%; /* Adjust width of the input boxes */
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 35px;
+}
+
+.registerButton {
+    background-color: #104F55; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    padding: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.registerButton:hover {
+    background-color: #032a2e; 
+    border: none;
+    color: white;
+}
+
+.footer {
+    margin-top: 25%;
+}
+.valid {
+    color: rgba(32, 35, 32, 0.402);
+    font-style: italic;
+}
+
+.invalid {
+    color: rgb(0, 0, 0);
+}
+/* Register.Module.css */
+
+.passwordCriteria {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.passwordCriteria p {
+    margin: 0 0 10px 0;
+}
+
+.passwordCriteria ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.passwordCriteria li {
+    margin-bottom: 5px;
+    display: block; /* Ensure each item takes the full width */
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #f9f9f9;
+    color: #000;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Show the tooltip text when hovering */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+

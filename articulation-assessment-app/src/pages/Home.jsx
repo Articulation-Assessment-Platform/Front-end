@@ -19,8 +19,8 @@ const Home = () => {
     };
   }, []);
   return (
-    <div class="container">
-      <div class="flex-container">
+    <div className="container">
+      <div className="flex-container">
         <CodeLoginComponent/>
       </div>
       <div className="flex-container">
@@ -29,10 +29,10 @@ const Home = () => {
       <div class="flex-container-amount">
         <div className='container'>
           <div className="flex-container-text">
-            <p class="amount-p">Users</p>
+            <p className="amount-p">Users</p>
             </div>
             <div className="flex-container-explain">
-            <p class="amount">The amount of users using the platform now</p>
+            <p className="amount">The amount of users using the platform now</p>
             </div>
             <div className="flex-container-box-line">
             <hr className='amount'/>
