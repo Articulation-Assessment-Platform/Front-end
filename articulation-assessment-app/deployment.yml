@@ -16,4 +16,4 @@ spec:
       - name: frontend
         image: 11112002/frontend:latest
         ports:
-        - containerPort: 5330
+        - containerPort: 4001
