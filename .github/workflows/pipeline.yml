@@ -25,7 +25,9 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          cd articulation=assessment-app
+          npm run build
 
   sonarqube:
     needs: build
