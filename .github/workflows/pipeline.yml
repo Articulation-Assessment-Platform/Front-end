@@ -131,3 +131,4 @@ jobs:
         run: |
           kubectl apply -f "articulation-assessment-app/deployment.yml"
           kubectl apply -f "articulation-assessment-app/service.yml"
+          kubectl apply -f "articulation-assessment-app/ingress.yml"
