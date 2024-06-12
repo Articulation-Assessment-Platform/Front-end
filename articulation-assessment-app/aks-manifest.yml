@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deployment
+  name: frontend
 spec:
   replicas: 1
   selector:
@@ -14,7 +14,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend-container
+      - name: frontend
         image: 11112002/frontend:latest
         ports:
         - containerPort: 4001
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-service
+  name: frontend
 spec:
   selector:
     app: frontend
