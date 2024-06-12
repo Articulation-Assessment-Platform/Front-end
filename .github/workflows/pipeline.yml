@@ -99,11 +99,20 @@ jobs:
 
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-
-      - name: Build Docker image
+      
+      - name: Create Docker network
+        run: docker network create backend
+        
+      - name: Build Docker Compose services
+        run: docker-compose -f "articulation-assessment-app/docker-compose.yml" build
+  
+      - name: Publish Docker images
         run: |
-          docker build -t 11112002/frontend:latest .
+          docker tag frontend:latest 11112002/frontend:latest
           docker push 11112002/frontend:latest
+  
+      - name: Clean up Docker containers
+        run: docker-compose -f "articulation-assessment-app/docker-compose.yml" down
 
   deploy:
     needs: docker
