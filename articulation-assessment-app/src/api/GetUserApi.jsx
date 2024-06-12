@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:5000/users-api/api/SpeechTherapist/profile';
+const apiUrl = 'http://apigateway:5000/users-api/api/SpeechTherapist/profile';
 
 const GetUserApi = async () => {
     function getCookie(name) {
