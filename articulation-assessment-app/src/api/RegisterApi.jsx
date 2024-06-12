@@ -1,5 +1,5 @@
-const apiUrlAuth = 'http://localhost:5000/auth-api/api/auth/register';
-const apiUrlUser = 'http://localhost:5000/users-api/api/SpeechTherapist/add';
+const apiUrlAuth = 'http://apigateway:5000/auth-api/api/auth/register';
+const apiUrlUser = 'http://apigateway:5000/users-api/api/SpeechTherapist/add';
 
 const RegisterApi = async (registerCredentials) => {
     try {
