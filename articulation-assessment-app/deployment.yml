@@ -1,19 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deployment
+  name: frontend-service
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: frontend
+      app: frontend-service
   template:
     metadata:
       labels:
-        app: frontend
+        app: frontend-service
     spec:
       containers:
-      - name: frontend
+      - name: frontend-service
         image: 11112002/frontend:latest
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
         ports:
         - containerPort: 4001
