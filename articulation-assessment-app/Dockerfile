@@ -1,5 +1,6 @@
 FROM node:20.11.1-alpine as build_image
 WORKDIR /app
+EXPOSE 4001 
 COPY vite.config.js .
 COPY package.json .
 RUN npm i
