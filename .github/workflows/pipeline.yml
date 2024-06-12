@@ -129,6 +129,6 @@ jobs:
 
       - name: Apply Kubernetes manifests
         run: |
-          kubectl apply -f "articulation-assessment-app/deployment.yml"
-          kubectl apply -f "articulation-assessment-app/service.yml"
+          kubectl apply -f "articulation-assessment-app/deployment.yml" --namespace ingress-basic
+          kubectl apply -f "articulation-assessment-app/service.yml" --namespace ingress-basic
           kubectl apply -f "articulation-assessment-app/ingress.yml"
