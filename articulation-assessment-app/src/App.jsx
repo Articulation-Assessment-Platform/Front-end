@@ -58,6 +58,7 @@ function App() {
               </>
             )}
             <li><Link to="/forum">Forum</Link></li>
+            <li><Link to="/forum">Forum2</Link></li>
             {user ? (
               <>
                 <li><Link to='/profile' className='right2'>Profile</Link></li>
