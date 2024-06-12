@@ -4,9 +4,6 @@ metadata:
   name: frontend-service
 spec:
   selector:
-    app: frontend
+    app: frontend-service
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 4001
-  type: ClusterIP
+      port: 4001
