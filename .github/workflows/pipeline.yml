@@ -32,6 +32,7 @@ jobs:
           npm run build
 
   sonarqube:
+    needs: build
     name: Build and Analyze
     runs-on: windows-latest
 
