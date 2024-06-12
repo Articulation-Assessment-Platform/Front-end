@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:5000/auth-api/api/auth/login';
+const apiUrl = 'http://apigateway:5000/auth-api/api/auth/login';
 
 const LoginApi = async (loginCredentials) => {
     const requestOptions = {
