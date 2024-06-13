@@ -16,6 +16,9 @@ spec:
       - name: frontend
         image: 11112002/frontend
         imagePullPolicy: Always
+        env:
+          - name: API_GATEWAY_URL
+            value: "http://10.0.61.102:5000"
         ports:
         - containerPort: 8080
         resources:
