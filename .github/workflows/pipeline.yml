@@ -135,4 +135,4 @@ jobs:
 
       - name: Apply Kubernetes manifests
         run: |
-          kubectl delete -f articulation-assessment-app/aks-manifest && kubectl apply -f articulation-assessment-app/aks-manifest
+          kubectl delete -f articulation-assessment-app/aks-manifest.yml && kubectl apply -f articulation-assessment-app/aks-manifest.yml
