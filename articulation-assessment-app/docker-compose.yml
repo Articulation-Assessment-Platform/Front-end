@@ -1,7 +1,7 @@
 ﻿services:
-  frontend:
-    image: frontend:latest
-    container_name: frontend
+  articulation-app:
+    image: articulation-app:latest
+    container_name: articulation-app
     ports:
       - "4001:4001"
     build:
