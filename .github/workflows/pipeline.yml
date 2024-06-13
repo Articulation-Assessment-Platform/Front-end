@@ -137,7 +137,5 @@ jobs:
         env:
           TAG: ${{ steps.vars.outputs.sha }}
         run: |
-          kubectl delete deployment frontend
-          kubectl delete service frontend
           envsubst < articulation-assessment-app/aks-manifest.yml | kubectl apply -f -
 
