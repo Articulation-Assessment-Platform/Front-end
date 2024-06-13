@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: articulation-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: articulation-app
   template:
     metadata:
       labels:
-        app: frontend
+        app: articulation-app
     spec:
       containers:
-      - name: frontend
-        image: 11112002/frontend
+      - name: articulation-app
+        image: 11112002/articulation-app
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
+  name: articulation-app
 spec:
   selector:
-    app: frontend
+    app: articulation-app
   ports:
     - protocol: TCP
       port: 8080
