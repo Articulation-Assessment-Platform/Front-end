@@ -1,4 +1,4 @@
-const apiUrl = '${process.env.API_GATEWAY_URL}/auth-api/api/auth/login';
+const apiUrl = 'http://10.0.61.102:5000/auth-api/api/auth/login';
 
 const LoginApi = async (loginCredentials) => {
     const requestOptions = {
