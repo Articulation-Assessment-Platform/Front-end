@@ -137,5 +137,5 @@ jobs:
         env:
           TAG: ${{ steps.vars.outputs.sha }}
         run: |
-          envsubst < articulation-assessment-app/aks-manifest.yml | kubectl apply -f -
-
+          sed -i 's/${TAG}/${TAG}/g' articulation-assessment-app/aks-manifest.yml
+          kubectl apply -f articulation-assessment-app/aks-manifest.yml
