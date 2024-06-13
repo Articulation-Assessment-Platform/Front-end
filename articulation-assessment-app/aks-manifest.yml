@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 11112002/frontend:${TAG}
+        image: 11112002/frontend:__TAG__
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
