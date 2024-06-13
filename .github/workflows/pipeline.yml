@@ -108,8 +108,8 @@ jobs:
 
       - name: Publish Docker images
         run: |
-          docker tag frontend-app:latest 11112002/frontend-app:latest
-          docker push 11112002/frontend-app:latest
+          docker tag frontend:latest 11112002/frontend:latest
+          docker push 11112002/frontend:latest
 
       - name: Clean up Docker containers
         run: docker-compose -f "articulation-assessment-app/docker-compose.yml" down
