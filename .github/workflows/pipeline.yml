@@ -103,18 +103,13 @@ jobs:
       - name: Create Docker network
         run: docker network create backend
 
-      - name: Extract Git Commit SHA
-        id: vars
-        run: echo "::set-output name=sha::$(git rev-parse --short HEAD)"
-
       - name: Build Docker Compose services
         run: docker-compose -f "articulation-assessment-app/docker-compose.yml" build
 
       - name: Publish Docker images
         run: |
-          TAG=${{ steps.vars.outputs.sha }}
-          docker tag articulation-app:latest 11112002/articulation-app:$TAG
-          docker push 11112002/articulation-app:$TAG
+          docker tag articulation-app:latest 11112002/articulation-app:latest
+          docker push 11112002/articulation-app:latest
 
       - name: Clean up Docker containers
         run: docker-compose -f "articulation-assessment-app/docker-compose.yml" down
