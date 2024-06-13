@@ -130,4 +130,5 @@ jobs:
 
       - name: Apply Kubernetes manifests
         run: |
+          kubectl apply -f frontend-config.yaml
           kubectl delete -f articulation-assessment-app/aks-manifest.yml && kubectl apply -f articulation-assessment-app/aks-manifest.yml
