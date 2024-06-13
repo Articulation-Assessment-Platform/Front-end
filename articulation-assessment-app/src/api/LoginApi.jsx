@@ -1,4 +1,4 @@
-const apiUrl = 'http://10.0.195.158:8080/auth-api/api/auth/login';
+const apiUrl = 'http://apigateway.default.svc.cluster.local:8080/auth-api/api/auth/login';
 
 const LoginApi = async (loginCredentials) => {
     const requestOptions = {
