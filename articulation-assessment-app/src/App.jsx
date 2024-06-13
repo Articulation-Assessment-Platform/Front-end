@@ -57,7 +57,7 @@ function App() {
               <li><Link to="/parents">Parents</Link></li>
               </>
             )}
-            <li><Link to="/forum">Forum</Link></li>
+            <li><Link to="/forum">Forums</Link></li>
             {user ? (
               <>
                 <li><Link to='/profile' className='right2'>Profile</Link></li>
