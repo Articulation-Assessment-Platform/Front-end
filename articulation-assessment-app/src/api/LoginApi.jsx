@@ -1,4 +1,4 @@
-const apiUrl = 'http://10.0.140.40:5000/auth-api/api/auth/login';
+const apiUrl = 'http://10.0.195.158:8080/auth-api/api/auth/login';
 
 const LoginApi = async (loginCredentials) => {
     const requestOptions = {
