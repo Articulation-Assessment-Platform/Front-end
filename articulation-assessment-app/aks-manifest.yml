@@ -18,6 +18,12 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        env:
+          - name: API_GATEWAY_URL
+            valueFrom:
+              configMapKeyRef:
+                name: frontend-config
+                key: api_gateway_url
         resources:
           requests:
             memory: "128Mi"
