@@ -1,4 +1,4 @@
-name: Frontend CI/CD Pipeline
+name: articulation-app CI/CD Pipeline
 
 on:
   push:
@@ -113,8 +113,8 @@ jobs:
       - name: Publish Docker images
         run: |
           TAG=${{ steps.vars.outputs.sha }}
-          docker tag frontend:latest 11112002/frontend:$TAG
-          docker push 11112002/frontend:$TAG
+          docker tag articulation-app:latest 11112002/articulation-app:$TAG
+          docker push 11112002/articulation-app:$TAG
 
       - name: Clean up Docker containers
         run: docker-compose -f "articulation-assessment-app/docker-compose.yml" down
