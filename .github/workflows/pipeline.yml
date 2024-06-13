@@ -102,15 +102,20 @@ jobs:
       
       - name: Create Docker network
         run: docker network create backend
-        
+
+      - name: Extract Git Commit SHA
+        id: vars
+        run: echo "::set-output name=sha::$(git rev-parse --short HEAD)"
+
       - name: Build Docker Compose services
         run: docker-compose -f "articulation-assessment-app/docker-compose.yml" build
-  
+
       - name: Publish Docker images
         run: |
-          docker tag frontend:latest 11112002/frontend:latest
-          docker push 11112002/frontend:latest
-  
+          TAG=${{ steps.vars.outputs.sha }}
+          docker tag frontend:latest 11112002/frontend:$TAG
+          docker push 11112002/frontend:$TAG
+
       - name: Clean up Docker containers
         run: docker-compose -f "articulation-assessment-app/docker-compose.yml" down
 
@@ -121,6 +126,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      
       - name: Azure Login
         run: az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
 
@@ -128,9 +134,10 @@ jobs:
         run: az aks get-credentials --resource-group 'Articulation-Assessment-Platform' --name 'aks-articulation'
 
       - name: Apply Kubernetes manifests
+        env:
+          TAG: ${{ steps.vars.outputs.sha }}
         run: |
           kubectl delete deployment frontend
           kubectl delete service frontend
-          kubectl apply -f "articulation-assessment-app/aks-manifest.yml"
-
+          envsubst < articulation-assessment-app/aks-manifest.yml | kubectl apply -f -
 
