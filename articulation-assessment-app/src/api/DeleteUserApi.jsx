@@ -1,4 +1,4 @@
-const apiUrl = '${process.env.API_GATEWAY_URL}/users-api/api/SpeechTherapist/remove';
+const apiUrl = 'http://4.182.184.83/users-api/api/SpeechTherapist/remove';
 
 const DeleteUserApi = async () => {
     function getCookie(name) {

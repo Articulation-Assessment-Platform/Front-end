@@ -1,5 +1,5 @@
-const apiUrlAuth = `${process.env.API_GATEWAY_URL}/auth-api/api/auth/register`;
-const apiUrlUser = `${process.env.API_GATEWAY_URL}/users-api/api/SpeechTherapist/add`;
+const apiUrlAuth = `http://4.182.184.83/auth-api/api/auth/register`;
+const apiUrlUser = `http://4.182.184.83/users-api/api/SpeechTherapist/add`;
 
 
 const RegisterApi = async (registerCredentials) => {
