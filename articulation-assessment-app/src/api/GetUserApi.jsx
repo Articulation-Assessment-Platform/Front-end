@@ -1,4 +1,4 @@
-const apiUrl = 'http://4.182.184.83/users-api/api/SpeechTherapist/profile';
+import { getApiUrl } from "./AzureKeyVault";
 
 const GetUserApi = async () => {
     function getCookie(name) {
@@ -16,6 +16,9 @@ const GetUserApi = async () => {
             'Authorization': `Bearer ${token}`
         }
     };
+
+    const ip = await getApiUrl();
+    const apiUrl = 'http://${ip}/users-api/api/SpeechTherapist/profile';
 
     try {
         const response = await fetch(apiUrl, requestOptions);

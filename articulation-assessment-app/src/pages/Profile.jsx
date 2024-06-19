@@ -20,8 +20,8 @@ const ProfilePage = () => {
       }
 
       try {
-        const userData = await GetUserApi();
-        console.log(userData);
+        const response = await GetUserApi();
+        const userData = await response.json();  
         setEmail(userData.data.email);
         setFirstName(userData.data.firstName);
         setLastName(userData.data.lastName);
@@ -32,10 +32,6 @@ const ProfilePage = () => {
 
     fetchData();
   }, [navigate]);
-
-  const handleDeleteUser = () => {
-    
-  }
 
   return (
     <div className='center'>

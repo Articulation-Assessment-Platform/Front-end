@@ -65,21 +65,19 @@ const RegisterPage = () => {
             const emailValid = validateEmail(email);
             const passwordValid = validatePassword(password, passwordAgain);
         
-            const errorElement = document.getElementById('errorRegister');
-            
             if (!formValid) {
-                errorElement.innerText = "Please fill in your information";
+                setErrorRegister("Please fill in your information");
                 return;
             }
-
+    
             if (!emailValid) {
-              errorElement.innerText = "Invalid email format";
-              return;
+                setErrorRegister("Invalid email format");
+                return;
             }
-
+    
             if (!passwordValid) {
-              errorElement.innerText = "Password does not meet the criteria, check the 'i' to see the criteria";
-              return;
+                setErrorRegister("Password does not meet the criteria, check the 'i' to see the criteria");
+                return;
             }
         
             const registerCredentials = {
@@ -88,20 +86,22 @@ const RegisterPage = () => {
                 email,
                 password
             };
-
+    
             const registerResponse = await RegisterApi(registerCredentials);
-
+    
             if (registerResponse.success) {
                 setIsRegistered(true);
             } else {
-                errorElement.innerText = registerResponse.error;
+                setErrorRegister(registerResponse.error);
             }
             
         } catch (error) {
             console.error('Error occurred:', error);
         }
     };
-
+    
+    const [errorRegister, setErrorRegister] = useState('');
+    
     return (
         <div className='register'>
             <h1>Register</h1>
@@ -189,7 +189,7 @@ const RegisterPage = () => {
                             </div>
                         </div>
                     </div>
-                    <p className='error' id='errorRegister'></p>
+                    <p className='error'>{errorRegister}</p>
                     <button className='registerButton' onClick={handleRegister}>Register</button>
                 </>
             ) : (
@@ -198,5 +198,4 @@ const RegisterPage = () => {
         </div>
     );
 };
-
 export default RegisterPage;

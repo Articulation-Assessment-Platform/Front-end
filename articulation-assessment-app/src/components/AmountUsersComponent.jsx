@@ -22,14 +22,14 @@ const AmountUsersComponent = ({ Type }) => {
       const increment = (target / duration) * (1000 / fps); // Calculate increment per frame
   
       const updateCount = () => {
-        const count = +counterRef.current.innerText;
+        // const count = +counterRef.current.innerText;
   
-        if (count < target) {
-          counterRef.current.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 1000 / fps); // Adjusted timeout for smoother animation
-        } else {
-          counterRef.current.innerText = target;
-        }
+        // if (count < target) {
+        //   counterRef.current.innerText = Math.ceil(count + increment);
+        //   setTimeout(updateCount, 1000 / fps); // Adjusted timeout for smoother animation
+        // } else {
+        //   counterRef.current.innerText = target;
+        // }
       };
   
       updateCount();
