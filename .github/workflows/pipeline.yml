@@ -30,6 +30,24 @@ jobs:
         run: |
           cd articulation-assessment-app
           npm run build
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start server
+      run: |
+        npm start &
+        sleep 10 # Wait for server to start (adjust as necessary)
+
+    - name: Run Cypress tests
+      run: npx cypress run --headless --browser chrome
 
   sonarqube:
     needs: build
