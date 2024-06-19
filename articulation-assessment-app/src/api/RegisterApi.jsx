@@ -1,4 +1,4 @@
-const apiUrlUser = `http://4.182.194.82/users-api/api/SpeechTherapist/add`;
+const apiUrlUser = `http://4.182.83.212/users-api/api/SpeechTherapist/add`;
 
 
 const RegisterApi = async (registerCredentials) => {
@@ -16,7 +16,6 @@ const RegisterApi = async (registerCredentials) => {
                 role: "SpeechTherapist" 
             })
         });
-        console.log(userResponse)
 
         if (userResponse.status === 400) {
             return { success: false, error: "Already a user with this information." };

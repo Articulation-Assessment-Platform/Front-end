@@ -47,3 +47,8 @@ Cypress.Commands.add('login', (role = 'SpeechTherapist') => {
   
     return `${base64Header}.${base64Payload}.${signature}`;
   }
+  Cypress.Commands.add('clearTokenCookie', () => {
+    cy.clearCookie('token', { domain: 'localhost' }); // Replace 'localhost' with your actual domain
+  });
+  
+  

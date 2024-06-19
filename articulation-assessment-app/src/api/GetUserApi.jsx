@@ -1,4 +1,4 @@
-import { getApiUrl } from "./AzureKeyVault";
+const apiUrl = 'http://4.182.83.212/users-api/api/SpeechTherapist/profile';
 
 const GetUserApi = async () => {
     function getCookie(name) {
@@ -8,30 +8,27 @@ const GetUserApi = async () => {
     }
     
     const token = getCookie('token');
+    console.log("Token:", token);
 
-    const requestOptions = {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-        }
-    };
 
-    const ip = await getApiUrl();
-    const apiUrl = 'http://${ip}/users-api/api/SpeechTherapist/profile';
 
     try {
-        const response = await fetch(apiUrl, requestOptions);
-        
-        if (response.ok) {
-            const data = await response.json();
+        const userResponse = await fetch(apiUrl, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        if (userResponse.ok) {
+            const data = await userResponse.json();
             
             return { success: true, data };
-        } else if (response.status === 401) {
+        } else if (userResponse.status === 401) {
             console.error('Unauthorized');
             return { success: false, error: 'Unauthorized' };
         } else {
-            const error = await response.json();
+            const error = await userResponse.json();
             return { success: false, error: error.message }; 
         }
     } catch (error) {
