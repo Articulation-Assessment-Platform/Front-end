@@ -11,29 +11,22 @@ const AddPostApi = async (postCredentials) => {
     const token = getCookie('token');
 
     try {       
-
-        // Set current datetime
         const currentDateTime = new Date().toISOString();
-        console.log(postCredentials)
         let postBody = {
             title: postCredentials.title,
             content: postCredentials.content,
             authorId: postCredentials.authorId,
             audience: postCredentials.audience,
             dateTime: currentDateTime,
-            forumId: postCredentials.forumId // Set forumId based on audience
+            forumId: postCredentials.forumId 
         };
-        console.log(postBody)
 
-        // Check if file (URL) is provided
-        console.log(postCredentials.file)
         if (postCredentials.file != null) {
-            const fileUrl = await UploadToBlob(postCredentials.file); // Function to upload file to Azure Blob Storage
+            const fileUrl = await UploadToBlob(postCredentials.file);
             postBody = {
                 ...postBody,
                 url: fileUrl
             };
-            console.log(fileUrl)
         }
 
         const response = await fetch(apiUrl, {

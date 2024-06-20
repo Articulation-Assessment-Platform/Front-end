@@ -4,25 +4,15 @@ const connectionString = 'BlobEndpoint=https://articulationstorage.blob.core.win
 
 const UploadToBlob = async (file) => {
     try {
-        // Create a BlobServiceClient using the provided connection string
         const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
 
-        // Get a ContainerClient for the postcontainer
         const containerName = 'postcontainer';
         const containerClient = blobServiceClient.getContainerClient(containerName);
 
-        // Use the file's name directly
         const fileName = file.name;
 
-        // Get a BlockBlobClient for the blob with the filename
         const blockBlobClient = containerClient.getBlockBlobClient(fileName);
 
-        // Upload file to Azure Blob Storage
-        const response = await blockBlobClient.uploadBrowserData(file);
-
-        console.log('File uploaded successfully:', response.requestId);
-
-        // Return the URL of the uploaded file
         return blockBlobClient.url;
     } catch (error) {
         console.error('Error uploading file to Azure Blob Storage:', error.message);

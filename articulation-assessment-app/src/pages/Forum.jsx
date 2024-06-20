@@ -85,7 +85,6 @@ const Forum = () => {
         const updatedPosts = posts.filter(newPosts => newPosts.id !== postId);
         setPosts(updatedPosts);
         setFilteredPosts(updatedPosts);
-        console.log('Post deleted successfully');
       } else {
         console.error('Error deleting post:', response.error);
       }

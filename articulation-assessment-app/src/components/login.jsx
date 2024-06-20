@@ -35,13 +35,12 @@ function LoginComponent({ setLoggingIn }) {
           };
 
           const loginResponse = await LoginApi(loginCredentials);
-          console.log(loginResponse)
 
           if (loginResponse.success) {
               document.cookie = `token=${loginResponse.token}; path=/`; 
               setLoggingIn(false);
               location.reload();
-              navigate("/home");
+              navigate("/");
           } else {
               document.getElementById('errorLogin').innerText = loginResponse.error;
           }
