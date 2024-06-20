@@ -55,7 +55,7 @@ jobs:
   #       npx cypress run --headless --browser chrome
 
   sonarqube:
-    needs: test
+    needs: build
     name: Build and Analyze
     runs-on: windows-latest
 
