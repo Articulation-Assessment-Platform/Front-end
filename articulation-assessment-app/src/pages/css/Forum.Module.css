@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .search-bar {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .search-bar input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .post-buttons {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .post-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .post-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .forum-categories {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .forum-categories button {
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: border-bottom-color 0.3s;
+  }
+  
+  .forum-categories button.active {
+    border-bottom-color: #007bff;
+    font-weight: bold;
+  }
+  
+  .forum-categories button:hover {
+    border-bottom-color: #0056b3;
+  }
+  
+  .forum-posts {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post {
+    margin-bottom: 20px;
+  }
+  
+  .post h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .post p {
+    margin: 10px 0 0 0;
+  }
+  

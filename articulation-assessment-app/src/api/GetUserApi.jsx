@@ -8,7 +8,6 @@ const GetUserApi = async () => {
     }
     
     const token = getCookie('token');
-    console.log("Token:", token);
 
 
 

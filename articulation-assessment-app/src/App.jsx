@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, Routes, Route, Navigate } from 'react-router-dom';
 
 import "./App.css";
-import { HomePage, ParentPage, SpeechTherapistPage, ForumPage, RegisterPage, NotFoundPage, ProfilePage } from "./pages";
+import { HomePage, ParentPage, SpeechTherapistPage, ForumPage, RegisterPage, NotFoundPage, ProfilePage, AddPostPage } from "./pages";
 import { LoginComponent } from "./components/Index";
 
 function App() {
@@ -79,6 +79,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage/>}/>
         <Route path="*" element={<NotFoundPage />} /> 
         <Route path="/unauthorized" element={<NotFoundPage/>}/>
+        <Route path="/addpost" element={<AddPostPage/>}/>
       </Routes>
       {loggingIn && <LoginComponent setLoggingIn={setLoggingIn} />}
       <div className="footer">

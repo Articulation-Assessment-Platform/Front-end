@@ -21,9 +21,8 @@
         }).as('getUserData');
     
         cy.get('nav').contains('Profile').click();
-});
+    });
     
-     
     });
   
   

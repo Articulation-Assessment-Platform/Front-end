@@ -12,6 +12,7 @@
   "dependencies": {
     "@azure/identity": "^4.3.0",
     "@azure/keyvault-secrets": "^4.8.0",
+    "@azure/storage-blob": "^12.23.0",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.15",
     "react": "^18.2.0",
