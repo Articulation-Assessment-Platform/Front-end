@@ -1,5 +1,5 @@
 import UploadToBlob from './UploadToBlob'; // Import uploadToBlobStorage function
-const apiUrl = `http://4.182.83.212/forums-api/api/Post/add`;
+const apiUrl = `http://4.182.195.93/forums-api/api/Post/add`;
 
 const AddPostApi = async (postCredentials) => {
     function getCookie(name) {
