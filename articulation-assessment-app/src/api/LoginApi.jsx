@@ -1,4 +1,4 @@
-const apiUrl = 'http://4.182.83.212/auth-api/api/auth/login';
+const apiUrl = 'http://4.182.195.93/auth-api/api/auth/login';
 
 const LoginApi = async (loginCredentials) => {
     const requestOptions = {

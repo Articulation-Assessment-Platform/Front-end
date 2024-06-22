@@ -1,4 +1,4 @@
-const apiUrl = `http://4.182.83.212/forums-api/api/Post/add`;
+const apiUrl = `http:///forums-api/api/Post/add`;
 
 
 const ViewPostApi = async (post) => {

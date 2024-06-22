@@ -1,6 +1,3 @@
-const apiUrl = `http://4.182.83.212/forums-api/api/Post/delete`;
-
-
 const DeletePostApi = async (postId) => {
     function getCookie(name) {
         const value = `; ${document.cookie}`;
@@ -9,7 +6,7 @@ const DeletePostApi = async (postId) => {
     }
     
     const token = getCookie('token');
-    const apiUrl = `http://4.182.83.212/forums-api/api/Post/delete/${postId}`;
+    const apiUrl = `http://4.182.195.93/forums-api/api/Post/delete/${postId}`;
 
     try {
         const userResponse = await fetch(apiUrl, {

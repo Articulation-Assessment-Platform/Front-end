@@ -1,4 +1,4 @@
-const apiUrl = 'http://4.182.83.212/users-api/api/SpeechTherapist/profile';
+const apiUrl = 'http://4.182.195.93/users-api/api/SpeechTherapist/profile';
 
 const GetUserApi = async () => {
     function getCookie(name) {

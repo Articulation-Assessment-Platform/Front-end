@@ -1,4 +1,4 @@
-const apiUrlUser = `http://4.182.83.212/users-api/api/SpeechTherapist/add`;
+const apiUrlUser = `http://4.182.195.93/users-api/api/SpeechTherapist/add`;
 
 
 const RegisterApi = async (registerCredentials) => {

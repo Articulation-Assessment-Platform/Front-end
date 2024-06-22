@@ -7,7 +7,7 @@ const GetMyPostsApi = async (id) => {
     
     const token = getCookie('token');
 
-    const apiUrl = `http://4.182.83.212/forums-api/api/Post/get/user/${id}`;
+    const apiUrl = `http://4.182.195.93/forums-api/api/Post/get/user/${id}`;
     try {
         const response = await fetch(apiUrl, {
             method: 'GET',
