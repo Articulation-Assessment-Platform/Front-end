@@ -52,7 +52,7 @@ jobs:
         npm stop dev
 
   sonarqube:
-    needs: build
+    needs: test
     name: Build and Analyze
     runs-on: windows-latest
 
