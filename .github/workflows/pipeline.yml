@@ -52,7 +52,7 @@ jobs:
 
   sonarqube:
     needs: test
-    name: Build and Analyze
+    name: Analyze
     runs-on: windows-latest
 
     steps:
