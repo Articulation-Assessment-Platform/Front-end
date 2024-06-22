@@ -49,7 +49,6 @@ jobs:
         npm ci
         npm run dev &
         npx cypress run 
-        npm stop dev
 
   sonarqube:
     needs: test
@@ -150,5 +149,4 @@ jobs:
 
       - name: Apply Kubernetes manifests
         run: |
-          kubectl apply -f articulation-assessment-app/frontend-config.yaml
           kubectl delete -f articulation-assessment-app/aks-manifest.yml && kubectl apply -f articulation-assessment-app/aks-manifest.yml
