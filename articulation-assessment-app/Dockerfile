@@ -3,7 +3,7 @@ WORKDIR /app
 COPY vite.config.js .
 COPY package.json .
 RUN npm i
-COPY . .
+COPY src .
 RUN npm run build
 EXPOSE 4001 
 
