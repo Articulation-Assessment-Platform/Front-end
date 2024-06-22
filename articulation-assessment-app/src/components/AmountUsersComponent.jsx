@@ -6,7 +6,7 @@ const AmountUsersComponent = () => {
   return (
     <div className={styles.box}>
       <div className={styles.counter} >0</div>
-      <p className={styles.text}>{Type}</p>
+      <p className={styles.text}>Users</p>
     </div>
   );
 }

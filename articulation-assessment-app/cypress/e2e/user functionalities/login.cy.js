@@ -21,7 +21,7 @@ context('Login', () => {
         cy.get('input[placeholder="Email"]').type('john.doe@example.com');
         cy.get('input[placeholder="Password"]').type('wrongpassword');
     
-        cy.intercept('POST', 'http://4.182.184.83/auth-api/api/auth/login', {
+        cy.intercept('POST', 'http://4.182.195.93/auth-api/api/auth/login', {
             statusCode: 401,
             body: { message: 'Invalid credentials' }
           }).as('loginRequest');
@@ -50,7 +50,7 @@ context('Login', () => {
         cy.get('input[placeholder="Email"]').type('john.doe@example.com');
         cy.get('input[placeholder="Password"]').type('password123');
     
-        cy.intercept('POST', 'http://4.182.184.83/auth-api/api/auth/login', {
+        cy.intercept('POST', 'http://4.182.195.93/auth-api/api/auth/login', {
             statusCode: 200,
             body: { token: 'mock-jwt-token' }
           }).as('loginRequest');

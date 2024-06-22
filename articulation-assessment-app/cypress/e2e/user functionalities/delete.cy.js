@@ -6,7 +6,7 @@ describe('Delete account', () => {
       cy.visit('http://localhost:5173/');
       cy.login(); // Assuming this logs in the user
       
-        cy.intercept('GET', 'http://4.182.83.212/users-api/api/SpeechTherapist/profile', (req) => {
+        cy.intercept('GET', 'http://4.182.195.93/users-api/api/SpeechTherapist/profile', (req) => {
           req.reply({
             statusCode: 200,
             body: {
@@ -21,7 +21,7 @@ describe('Delete account', () => {
     
         cy.get('nav').contains('Profile').click();
       // Intercept the delete request
-      cy.intercept('DELETE', 'http://4.182.83.212/users-api/api/SpeechTherapist/remove', (req) => {
+      cy.intercept('DELETE', 'http://4.182.195.93/users-api/api/SpeechTherapist/remove', (req) => {
         req.reply({
           statusCode: 200               
         });
@@ -52,7 +52,7 @@ describe('Delete account', () => {
       cy.visit('http://localhost:5173/');
       cy.login(); // Assuming this logs in the user
       
-      cy.intercept('GET', 'http://4.182.83.212/users-api/api/SpeechTherapist/profile', (req) => {
+      cy.intercept('GET', 'http://4.182.195.93/users-api/api/SpeechTherapist/profile', (req) => {
         req.reply({
           statusCode: 200,
           body: {
@@ -66,7 +66,6 @@ describe('Delete account', () => {
       }).as('getUserData');
     
         cy.get('nav').contains('Profile').click();
-      cy.get('nav').contains('Profile').click();
     });
   
     it("Delete account - Confirm clicked", () => {

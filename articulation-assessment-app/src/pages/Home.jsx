@@ -38,9 +38,9 @@ const Home = () => {
             <hr className='amount'/>
           </div>
           <div className="flex-container-box">
-            <AmountUsersComponent Type="Children"/>
-            <AmountUsersComponent Type="Speech therapists"/>
-            <AmountUsersComponent Type="Organisations"/>
+            <AmountUsersComponent/>
+            <AmountUsersComponent />
+            <AmountUsersComponent />
           </div>
         </div>
       </div>

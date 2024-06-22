@@ -50,7 +50,7 @@ context('Register', () => {
       cy.get('input#lastName').type('Meek');
       cy.get('input#password').clear().type('StrongP@ssw0rd');
       cy.get('input#passwordAgain').clear().type('StrongP@ssw0rd');
-      cy.intercept('POST', 'http://4.182.184.83/users-api/api/SpeechTherapist/add', {
+      cy.intercept('POST', 'http://http://4.182.195.93/users-api/api/SpeechTherapist/add', {
         statusCode: 200,
         body: { success: true }
       }).as('registerUser');

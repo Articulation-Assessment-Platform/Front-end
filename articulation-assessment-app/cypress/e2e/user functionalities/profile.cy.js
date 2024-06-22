@@ -7,7 +7,7 @@
       }) 
 
       it("Open profile", () => {
-        cy.intercept('GET', 'http://4.182.83.212/users-api/api/SpeechTherapist/profile', (req) => {
+        cy.intercept('GET', 'http://http://4.182.195.93/users-api/api/SpeechTherapist/profile', (req) => {
           req.reply({
             statusCode: 200,
             body: {
