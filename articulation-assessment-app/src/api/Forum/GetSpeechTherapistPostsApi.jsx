@@ -1,4 +1,4 @@
-const apiUrl = `http://4.182.83.212/forums-api/api/Post/get/forum/1`;
+const apiUrl = `http://4.182.195.93/forums-api/api/Post/get/forum/1`;
 
 const GetSpeechTherapistPostsApi = async () => {
     function getCookie(name) {
