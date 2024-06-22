@@ -12,7 +12,6 @@ const AddPostPage = () => {
 
     if (!tokenCookie) {
       navigate('/home');
-      return;
     }
   }, [navigate]);
 

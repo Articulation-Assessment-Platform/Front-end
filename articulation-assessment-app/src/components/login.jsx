@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import "./css/LoginHover.Module.css";
-import { Link} from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 import { LoginApi  } from '../api';
-import { useNavigate } from 'react-router-dom';
 
 function LoginComponent({ setLoggingIn }) {
   const navigate = useNavigate();
@@ -40,7 +39,6 @@ function LoginComponent({ setLoggingIn }) {
               document.cookie = `token=${loginResponse.token}; path=/`; 
               setLoggingIn(false);
               location.reload();
-              navigate("/");
           } else {
               document.getElementById('errorLogin').innerText = loginResponse.error;
           }

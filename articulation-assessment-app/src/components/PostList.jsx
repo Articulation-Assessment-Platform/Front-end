@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './css/PostList.Module.css';
 
 const PostList = ({ posts, onDelete, user }) => {
@@ -23,5 +24,23 @@ const PostList = ({ posts, onDelete, user }) => {
     </div>
   );
 };
+
+PostList.propTypes = {
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+      authorId: PropTypes.string.isRequired,
+      dateTime: PropTypes.string.isRequired,
+      url: PropTypes.string,
+    })
+  ).isRequired,
+  onDelete: PropTypes.func.isRequired,
+  user: PropTypes.shape({
+    nameid: PropTypes.string.isRequired,
+  }),
+};
+
 
 export default PostList;

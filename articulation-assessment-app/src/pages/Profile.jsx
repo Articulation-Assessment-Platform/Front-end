@@ -48,8 +48,8 @@ const ProfilePage = () => {
         setDeleteSuccess(true);
         setDeleteSuccess(false);
         document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        window.location.reload();
         navigate('/');
+        window.location.reload();
       } else {
         console.error('Failed to delete user data:', response.error);
       }

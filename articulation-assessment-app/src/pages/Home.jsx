@@ -26,7 +26,7 @@ const Home = () => {
       <div className="flex-container">
         <InformationComponent/>
       </div>
-      <div class="flex-container-amount">
+      <div className="flex-container-amount">
         <div className='container'>
           <div className="flex-container-text">
             <p className="amount-p">Users</p>
@@ -44,13 +44,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div class="flex-container-long">
+      <div className="flex-container-long">
       <div className='container'>
           <div className="flex-container-box-text">
-            <p class="amount-p">Latest forum posts</p>
+            <p className="amount-p">Latest forum posts</p>
             </div>
             <div className="flex-container-explain">
-            <p class="amount">The latest forum posts uploaded from parents and speech therapists</p>
+            <p className="amount">The latest forum posts uploaded from parents and speech therapists</p>
             </div>
             <div className="flex-container-box-line">
             <hr className='amount'/>

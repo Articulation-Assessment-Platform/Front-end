@@ -10,7 +10,6 @@ const Forum = () => {
   const [activeCategory, setActiveCategory] = useState('Open Forums');
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     const tokenCookie = document.cookie.split(';').find((item) => item.trim().startsWith('token='));
@@ -66,7 +65,6 @@ const Forum = () => {
   };
 
   const handleSearch = (query) => {
-    setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredPosts(posts); 
     } else {
