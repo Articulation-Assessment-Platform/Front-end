@@ -1,4 +1,4 @@
-const apiUrl = `http://4.182.83.212/forums-api/api/Post/delete`;
+const apiUrl = `http://4.182.195.93/forums-api/api/Post/delete`;
 
 
 const DeletePostApi = async (postId) => {
